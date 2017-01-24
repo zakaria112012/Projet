@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity  {
                 progressDialog.setMessage("Registring user ... ");
                 progressDialog.show();
 
+                progressDialog.setCancelable( true);
+
                 firebaseAuth.createUserWithEmailAndPassword(email,password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
